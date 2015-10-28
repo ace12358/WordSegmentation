@@ -27,9 +27,18 @@ def init_model(vocab_size):
 
 def make_label(sent):
     labels = list()
+    pre_label = 1
+    pre_char = ' '
     for char in sent:
         if not char == ' ':
-            labels.append(1)
+            if pre_char == ' ':
+                labels.append(0)
+                pre_label = 0
+            elif not pre_char == ' ':
+                labels.append(1)
+                pre_label = 1
+        
+        pre_char = char
     return labels
 
 def train(char2id, model, optimizer):
@@ -103,7 +112,6 @@ def forward_one(x, target, label):
     return np.argmax(pred), F.softmax_cross_entropy(pred, correct)
 
 def get_onehot(num):
-    #return chainer.Variable(np.array([[num]], dtype=np.int32))
     return chainer.Variable(np.array([num], dtype=np.int32))
 def decode():
     pass
@@ -114,7 +122,7 @@ if __name__ == '__main__':
     window = 3
     embed_units = 100
     hidden_units = 50
-    label_num = 4
+    label_num = 2
     batch_size = 30
     learning_rate = 0.1
     n_epoch = 10
