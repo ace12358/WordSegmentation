@@ -17,9 +17,25 @@ def show_config(ini):
     '''
     show config
     '''
+    print('####config####')
     for section in ini.sections():
         print ('[%s]' % (section))
         show_sectoin(ini, section)
+    return
+
+def show_sectoin(ini, section):
+    '''
+    show section
+    '''
+    for key in ini.options(section):
+        show_key(ini, section, key)
+    return
+
+def show_key(ini, section, key):
+    '''
+    show key
+    '''
+    print ('%s.%s =%s' % (section, key, ini.get(section, key)))
     return
 
 
@@ -61,12 +77,15 @@ def make_label(sent):
     return labels
 
 def train(char2id, model, optimizer):
-
+    print('####Training####')
     for epoch in range(n_epoch):
-        print('epoch:', epoch)
         batch_count = 0
         accum_loss = 0
+        line_cnt = 0
         for line in open(train_file):
+            line_cnt += 1
+            print("epoch: {0} trainig sentence: {1}".format(epoch,\
+                                                 line_cnt), '\r', end='')
             x = ''.join(line.strip().split())
             t = make_label(line.strip())
             for target in range(len(x)):
@@ -77,6 +96,7 @@ def train(char2id, model, optimizer):
             if batch_count == batch_size:
                 optimizer.zero_grads()
                 accum_loss.backward()
+                optimizer.weight_decay(lam)
                 optimizer.update()
                 accum_loss = 0
                 batch_count = 0
@@ -84,13 +104,16 @@ def train(char2id, model, optimizer):
         if not batch_count == 0:
             optimizer.zero_grads()
             accum_loss.backward()
+            optimizer.weight_decay(lam)
             optimizer.update()
             accum_loss = 0
             batch_count = 0
-        quick_test(char2id, model)
+        #quick_test(char2id, model)
+    print('\nTraining Done!')
 
 
 def quick_test(char2id, model):
+    print('####quick test####')
     sent_cnt = 0
     labels = list()
     for line in open(train_file):
@@ -104,12 +127,17 @@ def quick_test(char2id, model):
         print ('true sequence***:', line.strip())
         labels = list()
         sent_cnt += 1
-        if sent_cnt == 10:
+        if sent_cnt == 3:
             break
 
 def test(char2id, model):
     labels = list()
+    with open(result_raw, 'w') as test:
+        print("####Test####")
+    line_cnt = 0
     for line in open(train_file):
+        line_cnt += 1
+        print("test sentence: {0}".format(line_cnt),'\r',end='')
         x = ''.join(line.strip().split())
         t = make_label(line.strip())
         for target in range(len(x)):
@@ -119,6 +147,7 @@ def test(char2id, model):
         with open(result_raw, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x,labels))))
             labels = list()
+    print('\nTest Done!')
 
 def forward_one(x, target, label):
     # make input window vector
@@ -171,11 +200,14 @@ if __name__ == '__main__':
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
+    lam = float(ini.get('Parameters', 'lam'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
     learning_rate = float(ini.get('Parameters', 'learning_rate'))
     n_epoch = int(ini.get('Settings', 'n_epoch'))
     delta = float(ini.get('Parameters', 'delta'))
+    show_config(ini)
+
     char2id = create_vocab()
     model, opt = init_model(len(char2id))
     train(char2id, model, opt)

@@ -103,6 +103,7 @@ def train(char2id, model, optimizer):
             if batch_count == batch_size:
                 optimizer.zero_grads()
                 accum_loss.backward()
+                optimizer.weight_decay(lam)
                 optimizer.update()
                 accum_loss = 0
                 batch_count = 0
@@ -113,6 +114,7 @@ def train(char2id, model, optimizer):
         if not batch_count == 0:
             optimizer.zero_grads()
             accum_loss.backward()
+            optimizer.weight_decay(lam)
             optimizer.update()
             accum_loss = 0
             batch_count = 0
@@ -224,6 +226,7 @@ if __name__ == '__main__':
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
+    lam = float(ini.get('Parameters', 'lam'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
     learning_rate = float(ini.get('Parameters', 'learning_rate'))

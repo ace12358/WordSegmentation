@@ -98,6 +98,7 @@ def train(char2id, model, optimizer):
             if batch_count == batch_size:
                 optimizer.zero_grads()
                 accum_loss.backward()
+                optimizer.weight_decay(lam)
                 optimizer.update()
                 accum_loss = 0
                 batch_count = 0
@@ -207,6 +208,7 @@ if __name__ == '__main__':
     evaluation = ini.get('Result', 'evaluation')
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
+    lam = float(ini.get('Parameters', 'lam'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
