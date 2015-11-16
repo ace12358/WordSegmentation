@@ -135,7 +135,7 @@ def test(char2id, model):
     with open(result_raw, 'w') as test:
         print("####Test####")
     line_cnt = 0
-    for line in open(train_file):
+    for line in open(test_file):
         line_cnt += 1
         print("test sentence: {0}".format(line_cnt),'\r',end='')
         x = ''.join(line.strip().split())

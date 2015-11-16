@@ -140,7 +140,7 @@ def test(char2id, model):
     line_cnt = 0
     hidden_vec = chainer.Variable(np.zeros((1, hidden_units),\
                                                      dtype=np.float32))
-    for line in open(train_file):
+    for line in open(test_file):
         line_cnt += 1
         print("test sentence: {0}".format(line_cnt),'\r',end='')
         x = ''.join(line.strip().split())
