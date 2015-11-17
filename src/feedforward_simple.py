@@ -108,7 +108,7 @@ def train(char2id, model, optimizer):
             optimizer.update()
             accum_loss = 0
             batch_count = 0
-        #quick_test(char2id, model)
+        quick_test(char2id, model)
     print('\nTraining Done!')
 
 
@@ -119,11 +119,13 @@ def quick_test(char2id, model):
     for line in open(train_file):
         x = ''.join(line.strip().split())
         t = make_label(line.strip())
+        dists = list()
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            loss, acc = forward_one(x, target, label)
-        print ('predict sequence:', ''.join(label2seq(x,labels)))
+            dist, acc = forward_one(x, target, label)
+            dists.append(dist)
+        print ('predict sequence:', ''.join(label2seq(x,dists)))
         print ('true sequence***:', line.strip())
         labels = list()
         sent_cnt += 1
@@ -137,15 +139,18 @@ def test(char2id, model):
     line_cnt = 0
     for line in open(test_file):
         line_cnt += 1
+        dists = list()
         print("test sentence: {0}".format(line_cnt),'\r',end='')
         x = ''.join(line.strip().split())
         t = make_label(line.strip())
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            loss, acc = forward_one(x, target, label)
+            dist, loss = forward_one(x, target, label)
+            dists.append(dist)
         with open(result_raw, 'a') as test:
-            test.write("{0}\n".format(''.join(label2seq(x,labels))))
+            print("{0}\n".format(''.join(label2seq(x, dists))))
+            test.write("{0}\n".format(''.join(label2seq(x, dists))))
             labels = list()
     print('\nTest Done!')
 
@@ -157,13 +162,14 @@ def forward_one(x, target, label):
     for i in range(distance):
         x.append('</s>')
         x.insert(0,'<s>')
-    for i in range(-distance, distance + 1):
+    for i in range(-distance+1 , distance + 2):
         char = x[target + i]
         char_id = char2id[char]
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
 
     concat = F.concat(tuple(char_vecs))
+    print(tuple(char_vecs)[0])
     hidden = model.hidden1(F.sigmoid(concat))
     pred = F.softmax(model.output(hidden))
     #pred = add_delta(pred)
@@ -172,6 +178,7 @@ def forward_one(x, target, label):
 
 def add_delta(p):
     return p + delta
+
 def get_onehot(num):
     return chainer.Variable(np.array([num], dtype=np.int32))
 
