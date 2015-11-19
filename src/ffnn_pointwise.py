@@ -3,8 +3,9 @@
 
 '''
 Usage:
-python feed_forward_simple.txt config.ini
+python ffnn_pointwise.txt config.ini
 '''
+
 import sys
 import os
 import chainer
@@ -18,11 +19,13 @@ def show_config(ini):
     '''
     show config
     '''
-    print('####config####')
-    for section in ini.sections():
-        print ('[%s]' % (section))
-        show_sectoin(ini, section)
-    return
+    with open(config_file, 'w') as config:
+        print('####config####')
+        for section in ini.sections():
+            print ('[%s]' % (section))
+            config.write('[%s]'.format(section))
+            show_sectoin(ini, section)
+        return
 
 def show_sectoin(ini, section):
     '''
@@ -36,8 +39,10 @@ def show_key(ini, section, key):
     '''
     show key
     '''
-    print ('%s.%s =%s' % (section, key, ini.get(section, key)))
-    return
+    with open(config_file, 'a') as config:
+        print ('%s.%s =%s' % (section, key, ini.get(section, key)))
+        config.write('%s.%s =%s'.format(section, key, ini.get(section, key)))
+        return
 
 
 def create_vocab():
@@ -120,7 +125,7 @@ def train(char2id, model, optimizer):
 
 
 def epoch_test(char2id, model, epoch):
-    print('####epoch: {} test and evaluation####'.format(epoch))
+    print('####epoch: {} test and evaluation####'.format(epoch), '\r', end = '')
     labels = list()
     result_file = '{0}_{1}.txt'.format(result_raw.split('.txt')[0], epoch)
     for line in open(train_file):
@@ -208,7 +213,7 @@ if __name__ == '__main__':
     train_file = ini.get('Data', 'train')
     test_file = ini.get('Data', 'test')
     result_raw = ini.get('Result', 'raw')
-    config = ini.get('Result', 'config')
+    config_file = ini.get('Result', 'config')
     evaluation = ini.get('Result', 'evaluation')
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
