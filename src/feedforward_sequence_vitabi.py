@@ -24,6 +24,7 @@ def init_model(vocab_size):
     )
     
     opt = optimizers.AdaGrad(lr=learning_rate)
+    opt = optimizers.Adam()
     opt.setup(model)
     return model, opt
 

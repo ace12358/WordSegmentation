@@ -57,7 +57,8 @@ def init_model(vocab_size):
         output=F.Linear(hidden_units, label_num),
     )
     
-    opt = optimizers.AdaGrad(lr=learning_rate)
+    #opt = optimizers.AdaGrad(lr=learning_rate)
+    opt = optimizers.Adam()
     opt.setup(model)
     return model, opt
 
@@ -84,14 +85,17 @@ def train(char2id, model, optimizer):
         line_cnt = 0
         for line in open(train_file):
             line_cnt += 1
-            print("epoch: {0} trainig sentence: {1}".format(epoch,\
-                                                 line_cnt), '\r', end='')
+            print("\nepoch: {0} trainig sentence: {1}".format(epoch, line_cnt))
+            #print("epoch: {0} trainig sentence: {1}".format(epoch,\
+            #                                     line_cnt), '\r', end='')
             x = ''.join(line.strip().split())
             t = make_label(line.strip())
             for target in range(len(x)):
                 label = t[target]
                 pred, loss = forward_one(x, target, label)
                 accum_loss += loss
+                print('loss:',loss.data)
+                print('accum loss', accum_loss.data)
             batch_count += 1
             if batch_count == batch_size:
                 optimizer.zero_grads()
@@ -100,6 +104,8 @@ def train(char2id, model, optimizer):
                 optimizer.update()
                 accum_loss = 0
                 batch_count = 0
+                #print(model.embed(get_onehot(0)).data)
+                #print(pred.data)
      
         if not batch_count == 0:
             optimizer.zero_grads()
@@ -108,7 +114,7 @@ def train(char2id, model, optimizer):
             optimizer.update()
             accum_loss = 0
             batch_count = 0
-        quick_test(char2id, model)
+        #quick_test(char2id, model)
     print('\nTraining Done!')
 
 
@@ -149,6 +155,7 @@ def test(char2id, model):
             dist, loss = forward_one(x, target, label)
             dists.append(dist)
         with open(result_raw, 'a') as test:
+            print(dists)
             print("{0}\n".format(''.join(label2seq(x, dists))))
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
             labels = list()
@@ -167,17 +174,30 @@ def forward_one(x, target, label):
         char_id = char2id[char]
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
-
     concat = F.concat(tuple(char_vecs))
-    print(tuple(char_vecs)[0])
     hidden = model.hidden1(F.sigmoid(concat))
-    pred = F.softmax(model.output(hidden))
-    #pred = add_delta(pred)
-    correct = get_onehot(label)
-    return np.argmax(pred), F.softmax_cross_entropy(pred, correct)
+    output = F.tanh(model.output(hidden))
+    dist = F.softmax(output)
+    print(dist.data, label, np.argmax(dist.data))
+    correct = get_onehot(label) # this may be a source of dist problem
+    #correct_dist = make_dist(label)
+    #print(correct_dist.data)
+    return np.argmax(dist.data), F.softmax_cross_entropy(output, correct)
 
-def add_delta(p):
-    return p + delta
+#def make_dist(label):
+#    dist_vec = list()
+#    for i in range(label_num):
+#        if i == label:
+#            #dist_vec.append(get_onehot(1))
+#            dist_vec.append(1)
+#        else:
+#            #dist_vec.append(get_onehot(0))
+#            dist_vec.append(0)
+#    #dist = F.concat(tuple(dist_vec))
+#    return dist_vec
+#
+#def add_delta(p):
+#    return p + delta
 
 def get_onehot(num):
     return chainer.Variable(np.array([num], dtype=np.int32))
