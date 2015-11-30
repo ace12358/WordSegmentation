@@ -19,13 +19,11 @@ def show_config(ini):
     '''
     show config
     '''
-    with open(config_file, 'w') as config:
-        print('####config####')
-        for section in ini.sections():
-            print ('[%s]' % (section))
-            config.write('[%s]'.format(section))
-            show_sectoin(ini, section)
-        return
+    print('####config####')
+    for section in ini.sections():
+        print ('[%s]' % (section))
+        show_sectoin(ini, section)
+    return
 
 def show_sectoin(ini, section):
     '''
@@ -41,9 +39,7 @@ def show_key(ini, section, key):
     '''
     with open(config_file, 'a') as config:
         print ('%s.%s =%s' % (section, key, ini.get(section, key)))
-        config.write('%s.%s =%s'.format(section, key, ini.get(section, key)))
-        return
-
+    return
 
 def create_vocab():
     vocab = dict()
@@ -101,7 +97,7 @@ def train(char2id, model, optimizer):
                 pred, loss = forward_one(x, target, label)
                 accum_loss += loss
                 #print('loss:',loss.data)
-                #print('accum loss', accum_loss.data)
+            #print('accum loss', accum_loss.data)
             batch_count += 1
             if batch_count == batch_size:
                 optimizer.zero_grads()
@@ -125,10 +121,13 @@ def train(char2id, model, optimizer):
 
 
 def epoch_test(char2id, model, epoch):
-    print('####epoch: {} test and evaluation####'.format(epoch), '\r', end = '')
     labels = list()
+    line_cnt = 0
     result_file = '{0}_{1}.txt'.format(result_raw.split('.txt')[0], epoch)
-    for line in open(train_file):
+    for line in open(test_file):
+        line_cnt += 1
+        print('####epoch: {0} test and evaluation sentence: {1}####'\
+                        .format(epoch,line_cnt), '\r', end = '')
         x = ''.join(line.strip().split())
         t = make_label(line.strip())
         dists = list()
@@ -183,11 +182,12 @@ def forward_one(x, target, label):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
-    hidden = model.hidden1(F.sigmoid(concat))
-    output = F.tanh(model.output(hidden))
+    hidden = F.sigmoid(model.hidden1(concat))
+    output = model.output(hidden)
     dist = F.softmax(output)
     #print(dist.data, label, np.argmax(dist.data))
     correct = get_onehot(label)
+    #print(output.data, correct.data)
     return np.argmax(dist.data), F.softmax_cross_entropy(output, correct)
 
 def get_onehot(num):
@@ -225,6 +225,8 @@ if __name__ == '__main__':
     n_epoch = int(ini.get('Settings', 'n_epoch'))
     delta = float(ini.get('Parameters', 'delta'))
     show_config(ini)
+    with open(config_file, 'w') as config:
+        ini.write(config)
 
     char2id = create_vocab()
     model, opt = init_model(len(char2id))
