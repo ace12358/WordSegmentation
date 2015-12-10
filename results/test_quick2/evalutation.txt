@@ -1,0 +1,700 @@
+####epoch0 evaluation####
+ref_file : ../results/test_quick2/result_0.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch1 evaluation####
+ref_file : ../results/test_quick2/result_1.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch2 evaluation####
+ref_file : ../results/test_quick2/result_2.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch3 evaluation####
+ref_file : ../results/test_quick2/result_3.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch4 evaluation####
+ref_file : ../results/test_quick2/result_4.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch5 evaluation####
+ref_file : ../results/test_quick2/result_5.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch6 evaluation####
+ref_file : ../results/test_quick2/result_6.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch7 evaluation####
+ref_file : ../results/test_quick2/result_7.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch8 evaluation####
+ref_file : ../results/test_quick2/result_8.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch9 evaluation####
+ref_file : ../results/test_quick2/result_9.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch10 evaluation####
+ref_file : ../results/test_quick2/result_10.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch11 evaluation####
+ref_file : ../results/test_quick2/result_11.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch12 evaluation####
+ref_file : ../results/test_quick2/result_12.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch13 evaluation####
+ref_file : ../results/test_quick2/result_13.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch14 evaluation####
+ref_file : ../results/test_quick2/result_14.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch15 evaluation####
+ref_file : ../results/test_quick2/result_15.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch16 evaluation####
+ref_file : ../results/test_quick2/result_16.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch17 evaluation####
+ref_file : ../results/test_quick2/result_17.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch18 evaluation####
+ref_file : ../results/test_quick2/result_18.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch19 evaluation####
+ref_file : ../results/test_quick2/result_19.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch20 evaluation####
+ref_file : ../results/test_quick2/result_20.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch21 evaluation####
+ref_file : ../results/test_quick2/result_21.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch22 evaluation####
+ref_file : ../results/test_quick2/result_22.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch23 evaluation####
+ref_file : ../results/test_quick2/result_23.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch24 evaluation####
+ref_file : ../results/test_quick2/result_24.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch25 evaluation####
+ref_file : ../results/test_quick2/result_25.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch26 evaluation####
+ref_file : ../results/test_quick2/result_26.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch27 evaluation####
+ref_file : ../results/test_quick2/result_27.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch28 evaluation####
+ref_file : ../results/test_quick2/result_28.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch29 evaluation####
+ref_file : ../results/test_quick2/result_29.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch30 evaluation####
+ref_file : ../results/test_quick2/result_30.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch31 evaluation####
+ref_file : ../results/test_quick2/result_31.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch32 evaluation####
+ref_file : ../results/test_quick2/result_32.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch33 evaluation####
+ref_file : ../results/test_quick2/result_33.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch34 evaluation####
+ref_file : ../results/test_quick2/result_34.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch35 evaluation####
+ref_file : ../results/test_quick2/result_35.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch36 evaluation####
+ref_file : ../results/test_quick2/result_36.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch37 evaluation####
+ref_file : ../results/test_quick2/result_37.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch38 evaluation####
+ref_file : ../results/test_quick2/result_38.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch39 evaluation####
+ref_file : ../results/test_quick2/result_39.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch40 evaluation####
+ref_file : ../results/test_quick2/result_40.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch41 evaluation####
+ref_file : ../results/test_quick2/result_41.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch42 evaluation####
+ref_file : ../results/test_quick2/result_42.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch43 evaluation####
+ref_file : ../results/test_quick2/result_43.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch44 evaluation####
+ref_file : ../results/test_quick2/result_44.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch45 evaluation####
+ref_file : ../results/test_quick2/result_45.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch46 evaluation####
+ref_file : ../results/test_quick2/result_46.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch47 evaluation####
+ref_file : ../results/test_quick2/result_47.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch48 evaluation####
+ref_file : ../results/test_quick2/result_48.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch49 evaluation####
+ref_file : ../results/test_quick2/result_49.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch50 evaluation####
+ref_file : ../results/test_quick2/result_50.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch51 evaluation####
+ref_file : ../results/test_quick2/result_51.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch52 evaluation####
+ref_file : ../results/test_quick2/result_52.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch53 evaluation####
+ref_file : ../results/test_quick2/result_53.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch54 evaluation####
+ref_file : ../results/test_quick2/result_54.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch55 evaluation####
+ref_file : ../results/test_quick2/result_55.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch56 evaluation####
+ref_file : ../results/test_quick2/result_56.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch57 evaluation####
+ref_file : ../results/test_quick2/result_57.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch58 evaluation####
+ref_file : ../results/test_quick2/result_58.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch59 evaluation####
+ref_file : ../results/test_quick2/result_59.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch60 evaluation####
+ref_file : ../results/test_quick2/result_60.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch61 evaluation####
+ref_file : ../results/test_quick2/result_61.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch62 evaluation####
+ref_file : ../results/test_quick2/result_62.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch63 evaluation####
+ref_file : ../results/test_quick2/result_63.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch64 evaluation####
+ref_file : ../results/test_quick2/result_64.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch65 evaluation####
+ref_file : ../results/test_quick2/result_65.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch66 evaluation####
+ref_file : ../results/test_quick2/result_66.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch67 evaluation####
+ref_file : ../results/test_quick2/result_67.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch68 evaluation####
+ref_file : ../results/test_quick2/result_68.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch69 evaluation####
+ref_file : ../results/test_quick2/result_69.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch70 evaluation####
+ref_file : ../results/test_quick2/result_70.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch71 evaluation####
+ref_file : ../results/test_quick2/result_71.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch72 evaluation####
+ref_file : ../results/test_quick2/result_72.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch73 evaluation####
+ref_file : ../results/test_quick2/result_73.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch74 evaluation####
+ref_file : ../results/test_quick2/result_74.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch75 evaluation####
+ref_file : ../results/test_quick2/result_75.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch76 evaluation####
+ref_file : ../results/test_quick2/result_76.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch77 evaluation####
+ref_file : ../results/test_quick2/result_77.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch78 evaluation####
+ref_file : ../results/test_quick2/result_78.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch79 evaluation####
+ref_file : ../results/test_quick2/result_79.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch80 evaluation####
+ref_file : ../results/test_quick2/result_80.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch81 evaluation####
+ref_file : ../results/test_quick2/result_81.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch82 evaluation####
+ref_file : ../results/test_quick2/result_82.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch83 evaluation####
+ref_file : ../results/test_quick2/result_83.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch84 evaluation####
+ref_file : ../results/test_quick2/result_84.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch85 evaluation####
+ref_file : ../results/test_quick2/result_85.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch86 evaluation####
+ref_file : ../results/test_quick2/result_86.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch87 evaluation####
+ref_file : ../results/test_quick2/result_87.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch88 evaluation####
+ref_file : ../results/test_quick2/result_88.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch89 evaluation####
+ref_file : ../results/test_quick2/result_89.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch90 evaluation####
+ref_file : ../results/test_quick2/result_90.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch91 evaluation####
+ref_file : ../results/test_quick2/result_91.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch92 evaluation####
+ref_file : ../results/test_quick2/result_92.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch93 evaluation####
+ref_file : ../results/test_quick2/result_93.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch94 evaluation####
+ref_file : ../results/test_quick2/result_94.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch95 evaluation####
+ref_file : ../results/test_quick2/result_95.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch96 evaluation####
+ref_file : ../results/test_quick2/result_96.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch97 evaluation####
+ref_file : ../results/test_quick2/result_97.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch98 evaluation####
+ref_file : ../results/test_quick2/result_98.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+####epoch99 evaluation####
+ref_file : ../results/test_quick2/result_99.txt
+sys_file : ../data/quick2.test
+processed 80 tokens with 80 phrases; found: 58 phrases; correct: 42.
+accuracy:  72.50%; precision:  72.41%; recall:  52.50%; FB1:  60.87
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58
+                 : precision:  72.41%; recall:  52.50%; FB1:  60.87  58

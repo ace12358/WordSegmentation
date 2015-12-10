@@ -1,0 +1,6 @@
+ref_file : ../results/kytea/kytea_ver0.4.7.result
+sys_file : ../data/jws_data/bccwj.test
+processed 139808 tokens with 86480 phrases; found: 86739 phrases; correct: 84762.
+accuracy:  98.92%; precision:  97.72%; recall:  98.01%; FB1:  97.87
+                 : precision:  97.72%; recall:  98.01%; FB1:  97.87  86739
+                 : precision:  97.72%; recall:  98.01%; FB1:  97.87  86739

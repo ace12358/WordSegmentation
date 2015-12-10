@@ -1,0 +1,34 @@
+####epoch0 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_0.txt
+sys_file : ../data/jws_data/bccwj.test
+####epoch0 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_0.txt
+sys_file : ../data/jws_data/bccwj_clean.test
+####epoch1 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_1.txt
+sys_file : ../data/jws_data/bccwj_clean.test
+processed 139905 tokens with 85890 phrases; found: 86836 phrases; correct: 77443.
+accuracy:  94.95%; precision:  89.18%; recall:  90.17%; FB1:  89.67
+                 : precision:  89.18%; recall:  90.17%; FB1:  89.67  86836
+                 : precision:  89.18%; recall:  90.17%; FB1:  89.67  86836
+####epoch2 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_2.txt
+sys_file : ../data/jws_data/bccwj_clean.test
+processed 139905 tokens with 85982 phrases; found: 86836 phrases; correct: 78812.
+accuracy:  95.70%; precision:  90.76%; recall:  91.66%; FB1:  91.21
+                 : precision:  90.76%; recall:  91.66%; FB1:  91.21  86836
+                 : precision:  90.76%; recall:  91.66%; FB1:  91.21  86836
+####epoch3 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_3.txt
+sys_file : ../data/jws_data/bccwj_clean.test
+processed 139905 tokens with 86189 phrases; found: 86836 phrases; correct: 79640.
+accuracy:  96.13%; precision:  91.71%; recall:  92.40%; FB1:  92.06
+                 : precision:  91.71%; recall:  92.40%; FB1:  92.06  86836
+                 : precision:  91.71%; recall:  92.40%; FB1:  92.06  86836
+####epoch4 evaluation####
+ref_file : ../results/ffnn_pointwise/ffnn_pointwise.result_4.txt
+sys_file : ../data/jws_data/bccwj_clean.test
+processed 139905 tokens with 86378 phrases; found: 86836 phrases; correct: 80214.
+accuracy:  96.41%; precision:  92.37%; recall:  92.86%; FB1:  92.62
+                 : precision:  92.37%; recall:  92.86%; FB1:  92.62  86836
+                 : precision:  92.37%; recall:  92.86%; FB1:  92.62  86836
