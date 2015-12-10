@@ -29,7 +29,7 @@ def create_vocab():
 def init_model(vocab_size):
     model = chainer.FunctionSet(
         embed=F.EmbedID(vocab_size, embed_units),
-        hidden1=F.Linear(window * embed_units, hidden_units),
+        hidden1=F.Linear(window * embed_units + hidden_units, hidden_units),
         output=F.Linear(hidden_units, label_num),
     )
     #opt = optimizers.AdaGrad(lr=learning_rate)
@@ -93,6 +93,8 @@ def train(char2id, model, optimizer):
         accum_loss = 0
         line_cnt = 0
         for line in open(train_file):
+            hidden = chainer.Variable(np.zeros((1, hidden_units),\
+                                                dtype=np.float32))
             line_cnt += 1
             print("####epoch: {0} trainig sentence: {1}".format(epoch,\
                                                  line_cnt), '\r', end='')
@@ -100,7 +102,7 @@ def train(char2id, model, optimizer):
             t = make_label(line.strip())
             for target in range(len(x)):
                 label = t[target]
-                pred, loss = forward_one(x, target, label)
+                pred, loss = forward_one(x, target, label, hidden)
                 accum_loss += loss
                 #print('loss:',loss.data)
             #print('accum loss', accum_loss.data)
@@ -129,6 +131,9 @@ def epoch_test(char2id, model, epoch):
     line_cnt = 0
     result_file = '{0}_{1}.txt'.format(result_raw.split('.txt')[0], epoch)
     for line in open(test_file):
+        hidden = chainer.Variable(np.zeros((1, hidden_units),\
+                                                dtype=np.float32))
+
         line_cnt += 1
         print('####epoch: {0} test and evaluation sentence: {1}####'\
                         .format(epoch,line_cnt), '\r', end = '')
@@ -138,7 +143,7 @@ def epoch_test(char2id, model, epoch):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, acc = forward_one(x, target, label)
+            dist, acc = forward_one(x, target, label, hidden)
             dists.append(dist)
         with open(result_file, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
@@ -151,6 +156,7 @@ def epoch_test(char2id, model, epoch):
     os.system('rm temp')
         #print('predict sequence:', ''.join(label2seq(x,dists)))
         #print('true sequence***:', line.strip())
+
 """
 def test(char2id, model):
     labels = list()
@@ -166,14 +172,14 @@ def test(char2id, model):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, loss = forward_one(x, target, label)
+            dist, loss = forward_one(x, target, label, hidden)
             dists.append(dist)
         with open(result_raw, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
             labels = list()
     print('\nTest Done!')
 """
-def forward_one(x, target, label):
+def forward_one(x, target, label, hidden):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -187,6 +193,7 @@ def forward_one(x, target, label):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
+    concat = F.concat((concat, hidden))
     hidden = F.sigmoid(model.hidden1(concat))
     output = model.output(hidden)
     dist = F.softmax(output)
