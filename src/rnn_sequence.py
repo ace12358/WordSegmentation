@@ -31,7 +31,7 @@ def init_model(vocab_size):
     model = chainer.FunctionSet(
         embed=F.EmbedID(vocab_size, embed_units),
         trans=F.EmbedID(label_num, label_num),
-        hidden1=F.Linear(window * embed_units, hidden_units),
+        hidden1=F.Linear(window * embed_units + hidden_units, hidden_units),
         output=F.Linear(hidden_units, label_num),
     )
     #opt = optimizers.AdaGrad(lr=learning_rate)
@@ -99,12 +99,14 @@ def train(char2id, model, optimizer):
             line_cnt += 1
             print("####epoch: {0} trainig sentence: {1}".format(epoch,\
                                                  line_cnt), '\r', end='')
+            hidden = chainer.Variable(np.zeros((1, hidden_units),\
+                                                dtype=np.float32))
             dists = list()
             x = ''.join(line.strip().split())
             gold_labels = make_label(line.strip())
             for target in range(len(x)):
                 #label = t[target]
-                dist = forward_one(x, target)
+                dist = forward_one(x, target, hidden)
                 dists.append(dist)
 
             #print("############### debug")
@@ -151,11 +153,13 @@ def epoch_test(char2id, model, epoch):
         line_cnt += 1
         print('####epoch: {0} test and evaluation sentence: {1}####'\
                         .format(epoch,line_cnt), '\r', end = '')
+        hidden = chainer.Variable(np.zeros((1, hidden_units),\
+                                                dtype=np.float32))
         x = ''.join(line.strip().split())
         t = make_label(line.strip())
         dists = list()
         for target in range(len(x)):
-            dist = forward_one(x, target)
+            dist = forward_one(x, target, hidden)
             dists.append(dist)
 
         y_hat = viterbi(dists)
@@ -173,7 +177,7 @@ def epoch_test(char2id, model, epoch):
         #print('predict sequence:', ''.join(label2seq(x,dists)))
         #print('true sequence***:', line.strip())
 
-def forward_one(x, target):
+def forward_one(x, target, hidden):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -187,6 +191,7 @@ def forward_one(x, target):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
+    concat = F.concat((concat, hidden))
     hidden = F.sigmoid(model.hidden1(concat))
     output = model.output(hidden)
     dist = F.softmax(output)
