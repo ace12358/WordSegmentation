@@ -102,7 +102,7 @@ def train(char2id, model, optimizer):
             t = make_label(line.strip())
             for target in range(len(x)):
                 label = t[target]
-                pred, loss = forward_one(x, target, label, hidden)
+                pred, loss = forward_one(x, target, label, hidden, train_flag=True)
                 accum_loss += loss
                 #print('loss:',loss.data)
             #print('accum loss', accum_loss.data)
@@ -143,7 +143,7 @@ def epoch_test(char2id, model, epoch):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, acc = forward_one(x, target, label, hidden)
+            dist, acc = forward_one(x, target, label, hidden, train_flag=False)
             dists.append(dist)
         with open(result_file, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
@@ -172,14 +172,14 @@ def test(char2id, model):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, loss = forward_one(x, target, label, hidden)
+            dist, loss = forward_one(x, target, label, hidden, train_frag)
             dists.append(dist)
         with open(result_raw, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
             labels = list()
     print('\nTest Done!')
 """
-def forward_one(x, target, label, hidden):
+def forward_one(x, target, label, hidden, train_flag):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -193,7 +193,8 @@ def forward_one(x, target, label, hidden):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
-    concat = F.concat((concat, hidden))
+    dropout_concat = F.dropout(concat, ratio=dropout_rate, train=train_flag)
+    concat = F.concat((dropout_concat, hidden))
     hidden = F.sigmoid(model.hidden1(concat))
     output = model.output(hidden)
     dist = F.softmax(output)
@@ -246,6 +247,7 @@ if __name__ == '__main__':
     evaluation = ini.get('Result', 'evaluation')
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
+    dropout_rate = float(ini.get('Parameters', 'dropout_rate'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
     lam = float(ini.get('Parameters', 'lam'))
     label_num = int(ini.get('Settings', 'label_num'))

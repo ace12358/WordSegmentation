@@ -106,7 +106,7 @@ def train(char2id, model, optimizer):
             gold_labels = make_label(line.strip())
             for target in range(len(x)):
                 #label = t[target]
-                dist = forward_one(x, target, hidden)
+                dist = forward_one(x, target, hidden, train_flag=True)
                 dists.append(dist)
 
             #print("############### debug")
@@ -159,7 +159,7 @@ def epoch_test(char2id, model, epoch):
         t = make_label(line.strip())
         dists = list()
         for target in range(len(x)):
-            dist = forward_one(x, target, hidden)
+            dist = forward_one(x, target, hidden, train_flag=False)
             dists.append(dist)
 
         y_hat = viterbi(dists)
@@ -177,7 +177,7 @@ def epoch_test(char2id, model, epoch):
         #print('predict sequence:', ''.join(label2seq(x,dists)))
         #print('true sequence***:', line.strip())
 
-def forward_one(x, target, hidden):
+def forward_one(x, target, hidden, train_flag):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -191,7 +191,8 @@ def forward_one(x, target, hidden):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
-    concat = F.concat((concat, hidden))
+    dropout_concat = F.dropout(concat, ratio=dropout_rate, train=train_flag)
+    concat = F.concat((dropout_concat, hidden))
     hidden = F.sigmoid(model.hidden1(concat))
     output = model.output(hidden)
     dist = F.softmax(output)
@@ -383,6 +384,7 @@ if __name__ == '__main__':
     lam = float(ini.get('Parameters', 'lam'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
+    dropout_rate = float(ini.get('Parameters', 'dropout_rate'))
     learning_rate = float(ini.get('Parameters', 'learning_rate'))
     n_epoch = int(ini.get('Settings', 'n_epoch'))
     delta = float(ini.get('Parameters', 'delta'))

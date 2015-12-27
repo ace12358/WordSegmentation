@@ -111,7 +111,7 @@ def train(char2id, model, optimizer):
             gold_labels = make_label(line.strip())
             for target in range(len(x)):
                 #label = t[target]
-                dist = forward_one(x, target, hidden, prev_c)
+                dist = forward_one(x, target, hidden, prev_c, train_flag=True)
                 dists.append(dist)
 
             #print("############### debug")
@@ -166,7 +166,7 @@ def epoch_test(char2id, model, epoch):
         t = make_label(line.strip())
         dists = list()
         for target in range(len(x)):
-            dist = forward_one(x, target, hidden, prev_c)
+            dist = forward_one(x, target, hidden, prev_c, train_flag=False)
             dists.append(dist)
 
         y_hat = viterbi(dists)
@@ -184,7 +184,7 @@ def epoch_test(char2id, model, epoch):
         #print('predict sequence:', ''.join(label2seq(x,dists)))
         #print('true sequence***:', line.strip())
 
-def forward_one(x, target, hidden, prev_c):
+def forward_one(x, target, hidden, prev_c, train_flag):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -198,6 +198,7 @@ def forward_one(x, target, hidden, prev_c):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
+    dropout_concat = F.dropout(concat, ratio=dropout_rate, train=train_flag)
     concat = F.concat((concat, hidden))
     i_gate = F.sigmoid(model.i_gate(concat))
     f_gate = F.sigmoid(model.f_gate(concat))
@@ -392,6 +393,7 @@ if __name__ == '__main__':
     embed_units = int(ini.get('Parameters', 'embed_units'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
     lam = float(ini.get('Parameters', 'lam'))
+    dropout_rate = float(ini.get('Parameters', 'dropout_rate'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
     learning_rate = float(ini.get('Parameters', 'learning_rate'))

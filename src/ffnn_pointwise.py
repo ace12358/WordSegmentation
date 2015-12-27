@@ -88,6 +88,7 @@ def make_label(sent):
 
 def train(char2id, model, optimizer):
     print('####Training####')
+    train_flag = True
     for epoch in range(n_epoch):
         batch_count = 0
         accum_loss = 0
@@ -100,7 +101,7 @@ def train(char2id, model, optimizer):
             t = make_label(line.strip())
             for target in range(len(x)):
                 label = t[target]
-                pred, loss = forward_one(x, target, label)
+                pred, loss = forward_one(x, target, label, train_flag)
                 accum_loss += loss
                 #print('loss:',loss.data)
             #print('accum loss', accum_loss.data)
@@ -125,6 +126,7 @@ def train(char2id, model, optimizer):
 
 
 def epoch_test(char2id, model, epoch):
+    train_flag = False
     labels = list()
     line_cnt = 0
     result_file = '{0}_{1}.txt'.format(result_raw.split('.txt')[0], epoch)
@@ -138,7 +140,7 @@ def epoch_test(char2id, model, epoch):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, acc = forward_one(x, target, label)
+            dist, acc = forward_one(x, target, label, train_flag)
             dists.append(dist)
         with open(result_file, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
@@ -173,7 +175,7 @@ def test(char2id, model):
             labels = list()
     print('\nTest Done!')
 """
-def forward_one(x, target, label):
+def forward_one(x, target, label, train_flag):
     # make input window vector
     distance = window // 2
     char_vecs = list()
@@ -187,7 +189,8 @@ def forward_one(x, target, label):
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
     concat = F.concat(tuple(char_vecs))
-    hidden = F.sigmoid(model.hidden1(concat))
+    dropout_concat = F.dropout(concat, ratio=dropout_rate, train=train_flag)
+    hidden = F.sigmoid(model.hidden1(dropout_concat))
     output = model.output(hidden)
     dist = F.softmax(output)
     #print(dist.data, label, np.argmax(dist.data))
@@ -241,6 +244,7 @@ if __name__ == '__main__':
     embed_units = int(ini.get('Parameters', 'embed_units'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
     lam = float(ini.get('Parameters', 'lam'))
+    dropout_rate = float(ini.get('Parameters', 'dropout_rate'))
     label_num = int(ini.get('Settings', 'label_num'))
     batch_size = int(ini.get('Settings', 'batch_size'))
     learning_rate = float(ini.get('Parameters', 'learning_rate'))
