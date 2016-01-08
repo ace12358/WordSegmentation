@@ -7,6 +7,7 @@ python ffnn_pointwise.txt config.ini
 '''
 
 import sys
+import re
 import os
 import chainer
 import numpy as np
@@ -26,13 +27,23 @@ def create_vocab():
     vocab['</s>'] = len(vocab)
     return vocab
 
-def init_model(vocab_size):
+def create_char_type2id():
+    char_type2id = dict()
+    char_type2id['hiragana'] = len(char_type2id)
+    char_type2id['katakana'] = len(char_type2id)
+    char_type2id['kanji'] = len(char_type2id)
+    char_type2id['alphabet'] = len(char_type2id)
+    char_type2id['number'] = len(char_type2id)
+    char_type2id['other'] = len(char_type2id)
+    char_type2id['<s>'] = len(char_type2id)
+    char_type2id['</s>'] = len(char_type2id)
+    return char_type2id
+
+def init_model(vocab_size, char_type_size):
     model = chainer.FunctionSet(
         embed=F.EmbedID(vocab_size, embed_units),
-        hidden1=F.Linear(window * embed_units + hidden_units, hidden_units),
-        i_gate=F.Linear(window * embed_units + hidden_units, hidden_units),
-        f_gate=F.Linear(window * embed_units + hidden_units, hidden_units),
-        o_gate=F.Linear(window * embed_units + hidden_units, hidden_units),
+        char_type_embed = F.EmbedID(char_type_size, char_type_embed_units),
+        hidden1=F.Linear(window * (embed_units + char_type_embed_units) + hidden_units, hidden_units),
         output=F.Linear(hidden_units, label_num),
     )
     #opt = optimizers.AdaGrad(lr=learning_rate)
@@ -107,7 +118,7 @@ def train(char2id, model, optimizer):
             t = make_label(line.strip())
             for target in range(len(x)):
                 label = t[target]
-                pred, loss = forward_one(x, target, label, hidden, prev_c, train_flag=True)
+                pred, loss = forward_one(x, target, label, hidden, train_flag=True)
                 accum_loss += loss
                 #print('loss:',loss.data)
             #print('accum loss', accum_loss.data)
@@ -149,7 +160,7 @@ def epoch_test(char2id, model, epoch):
         for target in range(len(x)):
             label = t[target]
             labels.append(label)
-            dist, acc = forward_one(x, target, label, hidden, prev_c, train_flag=True)
+            dist, acc = forward_one(x, target, label, hidden, train_flag=True)
             dists.append(dist)
         with open(result_file, 'a') as test:
             test.write("{0}\n".format(''.join(label2seq(x, dists))))
@@ -185,10 +196,11 @@ def test(char2id, model):
             labels = list()
     print('\nTest Done!')
 """
-def forward_one(x, target, label, hidden, prev_c, train_flag):
+def forward_one(x, target, label, hidden, train_flag):
     # make input window vector
     distance = window // 2
     char_vecs = list()
+    char_type_vecs = list()
     x = list(x)
     for i in range(distance):
         x.append('</s>')
@@ -198,14 +210,18 @@ def forward_one(x, target, label, hidden, prev_c, train_flag):
         char_id = char2id[char]
         char_vec = model.embed(get_onehot(char_id))
         char_vecs.append(char_vec)
-    concat = F.concat(tuple(char_vecs))
+    char_concat = F.concat(tuple(char_vecs))
+    for i in range(-distance+1 , distance + 2):
+        char = x[target + i]
+        char_type = make_char_type(char)
+        char_type_id = char_type2id[char_type]
+        char_type_vec = model.char_type_embed(get_onehot(char_type_id))
+        char_type_vecs.append(char_type_vec)
+    char_type_concat = F.concat(tuple(char_type_vecs))
     #dropout_concat = F.dropout(concat, ratio=dropout_rate, train=train_flag)
+    concat = F.concat((char_concat, char_type_concat))
     concat = F.concat((concat, hidden))
-    i_gate = F.sigmoid(model.i_gate(concat))
-    f_gate = F.sigmoid(model.f_gate(concat))
-    o_gate = F.sigmoid(model.o_gate(concat))
-    concat = F.concat((hidden, i_gate, f_gate, o_gate))
-    prev_c, hidden = F.lstm(prev_c, concat)
+    hidden = F.sigmoid(model.hidden1(concat))
     output = model.output(hidden)
     dist = F.softmax(output)
     #print(dist.data, label, np.argmax(dist.data))
@@ -215,6 +231,24 @@ def forward_one(x, target, label, hidden, prev_c, train_flag):
 
 def get_onehot(num):
     return chainer.Variable(np.array([num], dtype=np.int32))
+
+def make_char_type(char):
+    if re.match(u'[ぁ-ん]', char):
+        return('hiragana')
+    elif re.match(u'[ァ-ン]', char):
+        return('katakana')
+    elif re.match(u'[一-龥]', char):
+        return('kanji')
+    elif re.match(u'[A-Za-z]', char):
+        return('alphabet')
+    elif re.match(u'[0-9０-９]', char):
+        return('number')
+    elif char=='<s>':
+        return char
+    elif char=='</s>':
+        return char
+    else:
+        return('other')
 
 def label2seq(x, labels):
     seq = list()
@@ -257,6 +291,7 @@ if __name__ == '__main__':
     evaluation = ini.get('Result', 'evaluation')
     window = int(ini.get('Parameters', 'window'))
     embed_units = int(ini.get('Parameters', 'embed_units'))
+    char_type_embed_units = int(ini.get('Parameters', 'char_type_embed_units'))
     hidden_units = int(ini.get('Parameters', 'hidden_units'))
     lam = float(ini.get('Parameters', 'lam'))
     label_num = int(ini.get('Settings', 'label_num'))
@@ -269,6 +304,8 @@ if __name__ == '__main__':
         ini.write(config)
 
     char2id = create_vocab()
-    model, opt = init_model(len(char2id))
+    char_type2id = create_char_type2id()
+    print(len(char_type2id))
+    model, opt = init_model(len(char2id), len(char_type2id))
     train(char2id, model, opt)
     #test(char2id, model)
