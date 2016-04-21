@@ -1,2 +1,2 @@
-# WordSegmentation
-# WordSegmentation
+# Morphological Analyzer
+# MorphologicalAnalyzer
