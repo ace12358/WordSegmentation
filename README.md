@@ -1,7 +1,7 @@
 # WordSegmetation
 This is Japanese Word Segmentation tool using LSTM.
 
-[Screen Shot]
+[Screen Shot. TBD]
 
 # Dependency
 ```
@@ -26,7 +26,6 @@ python3 train_word_segmentater.py ../configs/test_config.ini
 ```
 This script execute training and evaluating.
 The training results is written in `results/` directory (that is based on config).
-
 
 ## config
 As you can see, the script refers config file.
@@ -55,5 +54,5 @@ The explanation of each parameter is follows:
 | Result     | evaluation            | Precision, Recall, and F1-score output the directory that you specify.                |
 
 
-# Authors
+# Author
 Yoshiaki Kitagawa
