@@ -25,7 +25,7 @@ moving to `src` directory, you can execute training test.
 python3 train_word_segmentater.py ../configs/test_config.ini
 ```
 This script execute training and evaluating.
-The training results is written a `results/` directory (that is based on config)
+The training results is written in `results/` directory (that is based on config).
 
 
 ## config
@@ -34,6 +34,7 @@ Thus, you change your settings and try to check your situation.
 
 #### config
 The explanation of each parameter is follows:
+
 | Section    | Item                  | Explanation                                                                           |
 |------------|-----------------------|---------------------------------------------------------------------------------------|
 | Data       | train                 | train file. Each word must be separated by ' ' (space)                                |
@@ -52,6 +53,7 @@ The explanation of each parameter is follows:
 | Result     | config                | this config file setting output the directory that you specify.                       |
 | Result     | model                 | trained model output the directory that you specify.                                  |
 | Result     | evaluation            | Precision, Recall, and F1-score output the directory that you specify.                |
+
 
 # Authors
 Yoshiaki Kitagawa
