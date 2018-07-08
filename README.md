@@ -30,7 +30,7 @@ The training results is written in `results/` directory (that is based on config
 
 ## config
 As you can see, the script refers config file.
-Thus, you change your settings and try to check your situation.
+Thus, you can change your settings and try to check your situation.
 
 #### config
 The explanation of each parameter is follows:
