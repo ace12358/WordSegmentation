@@ -1,0 +1,357 @@
+####epoch0 evaluation####
+ref_file : ../results/test_result/result_0.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch0 evaluation####
+ref_file : ../results/test_result/result_0.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch1 evaluation####
+ref_file : ../results/test_result/result_1.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch2 evaluation####
+ref_file : ../results/test_result/result_2.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch3 evaluation####
+ref_file : ../results/test_result/result_3.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch4 evaluation####
+ref_file : ../results/test_result/result_4.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch5 evaluation####
+ref_file : ../results/test_result/result_5.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch6 evaluation####
+ref_file : ../results/test_result/result_6.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch7 evaluation####
+ref_file : ../results/test_result/result_7.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch8 evaluation####
+ref_file : ../results/test_result/result_8.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch9 evaluation####
+ref_file : ../results/test_result/result_9.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch10 evaluation####
+ref_file : ../results/test_result/result_10.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch11 evaluation####
+ref_file : ../results/test_result/result_11.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch12 evaluation####
+ref_file : ../results/test_result/result_12.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch13 evaluation####
+ref_file : ../results/test_result/result_13.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch14 evaluation####
+ref_file : ../results/test_result/result_14.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch15 evaluation####
+ref_file : ../results/test_result/result_15.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch16 evaluation####
+ref_file : ../results/test_result/result_16.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch17 evaluation####
+ref_file : ../results/test_result/result_17.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch18 evaluation####
+ref_file : ../results/test_result/result_18.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch19 evaluation####
+ref_file : ../results/test_result/result_19.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch20 evaluation####
+ref_file : ../results/test_result/result_20.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch21 evaluation####
+ref_file : ../results/test_result/result_21.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch22 evaluation####
+ref_file : ../results/test_result/result_22.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch23 evaluation####
+ref_file : ../results/test_result/result_23.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch24 evaluation####
+ref_file : ../results/test_result/result_24.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch25 evaluation####
+ref_file : ../results/test_result/result_25.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch26 evaluation####
+ref_file : ../results/test_result/result_26.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch27 evaluation####
+ref_file : ../results/test_result/result_27.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch28 evaluation####
+ref_file : ../results/test_result/result_28.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch29 evaluation####
+ref_file : ../results/test_result/result_29.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch30 evaluation####
+ref_file : ../results/test_result/result_30.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch31 evaluation####
+ref_file : ../results/test_result/result_31.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch32 evaluation####
+ref_file : ../results/test_result/result_32.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch33 evaluation####
+ref_file : ../results/test_result/result_33.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch34 evaluation####
+ref_file : ../results/test_result/result_34.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch35 evaluation####
+ref_file : ../results/test_result/result_35.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch36 evaluation####
+ref_file : ../results/test_result/result_36.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch37 evaluation####
+ref_file : ../results/test_result/result_37.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch38 evaluation####
+ref_file : ../results/test_result/result_38.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch39 evaluation####
+ref_file : ../results/test_result/result_39.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch40 evaluation####
+ref_file : ../results/test_result/result_40.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch41 evaluation####
+ref_file : ../results/test_result/result_41.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch42 evaluation####
+ref_file : ../results/test_result/result_42.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch43 evaluation####
+ref_file : ../results/test_result/result_43.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch44 evaluation####
+ref_file : ../results/test_result/result_44.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch45 evaluation####
+ref_file : ../results/test_result/result_45.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch46 evaluation####
+ref_file : ../results/test_result/result_46.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch47 evaluation####
+ref_file : ../results/test_result/result_47.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch48 evaluation####
+ref_file : ../results/test_result/result_48.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+####epoch49 evaluation####
+ref_file : ../results/test_result/result_49.txt
+sys_file : ../data/test.txt
+processed 9 tokens with 6 phrases; found: 6 phrases; correct: 6.
+accuracy: 100.00%; precision: 100.00%; recall: 100.00%; FB1: 100.00
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
+                 : precision: 100.00%; recall: 100.00%; FB1: 100.00  6
